@@ -1,25 +1,24 @@
 public class Task_3 {
     public static void main(String[] args) {
+        int[] numbers = {1, 245, 3345, 322, 534, 3123};
+        print(numbers);
+    }
 
-        int[] numbers = {462849, 3414135, 123234, 3851, 4282, 23891, 138290};
-
-        for (int  array_number : numbers) {
-            if (is_numbers(array_number)) {
-                System.out.println(array_number);
+    public static void print(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            if (cheak(numbers[i])) {
+                System.out.println(numbers[i]);
             }
         }
     }
 
-    private static boolean is_numbers(int x) {
-
-        String s = String.valueOf(x);
-
-        for (int i = 0; i < s.length() - 1; i++) {
-            for (int j = i + 1; j < s.length(); j++) {
-                if (s.charAt(i) == s.charAt(j)) {
+    public static boolean cheak(int number) {
+        while (number > 0) {
+            int digit = number % 10;
+            for (int i = number / 10; i > 0; i /= 10)
+                if (i % 10 == digit)
                     return false;
-                }
-            }
+            number /= 10;
         }
         return true;
     }
