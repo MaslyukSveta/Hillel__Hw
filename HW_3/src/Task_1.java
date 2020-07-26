@@ -6,12 +6,9 @@ public class Task_1 {
 
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] % 2 == 0) {
-                System.out.println(numbers[i]);
-            }
-        }
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] % 2 != 0) {
-                System.out.println(numbers[i]);
+                System.out.println(" Even number: " + numbers[i]);
+            } else if (numbers[i] % 2 != 0) {
+                System.out.println(" Odd number: " + numbers[i]);
             }
         }
 

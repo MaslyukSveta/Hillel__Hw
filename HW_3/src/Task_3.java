@@ -9,7 +9,6 @@ public class Task_3 {
     }
 
     static int fibonachi(int number) {
-
         if (number == 0) {
             return 0;
         }
@@ -19,4 +18,5 @@ public class Task_3 {
             return fibonachi(number - 1) + fibonachi(number - 2);
         }
     }
+
 }
