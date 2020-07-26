@@ -1,6 +1,7 @@
 public class Runner {
 
     public static void main(String[] args) {
+
         Car[] cars = new Car[]{
                 new Car(1, "Mazda", "CX-5", 2018, "white", 25000, "AX7843AA"),
                 new Car(2, "BMW", "X1", 2018, "white", 24000, "AA2849BI"),
