@@ -1,5 +1,4 @@
-
-public class Task4 {
+public class Task_4 {
     public static void main(String[] args) {
 
         int[] numbers = {1, 23, 456, 7890, 12345, 678901, 2345678, 90123456, 789012345, 1234567890};
