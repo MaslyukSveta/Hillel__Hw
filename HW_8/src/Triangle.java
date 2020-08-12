@@ -1,8 +1,7 @@
 public class Triangle {
 
-    public double perimeter;
-    public double area;
-    public String typeTriangle;
+    private double perimeter;
+    private double area;
     private double ab;
     private double bc;
     private double ac;
@@ -17,47 +16,32 @@ public class Triangle {
         ac = TriangleProcessor.sizeSide(a, c);
     }
 
-    public double Perimeter() {
+    public double perimeter() {
         perimeter = ab + bc + ac;
         return perimeter;
     }
 
-    public void formulaHeron() {
+    public double formulaHeron() {
         double p;
         p = getPerimeter() / 2;
         area = Math.sqrt(p * (p - ab) * (p - bc) * (p - ac));
+        return area;
     }
 
-    public void triangleType() {
-
-        if (ab > 0 && bc > 0 && ac > 0) {
-            if (ab <= bc + ac && bc <= ab + ac && ac <= bc + ab) {
-                if (ab == bc && bc == ac && ac == ab) {
-                    typeTriangle = "Equilateral";
-
-                    return;
-                } else if (ab == bc || bc == ac || ac == ab) {
-                    typeTriangle = "Isosceles";
-                    return;
-                } else if (Math.round(Math.pow(ac, 2)) == (Math.pow(ab, 2) + Math.pow(bc, 2))) {
-                    typeTriangle = "Right";
-                    return;
-                } else {
-                    typeTriangle = "random";
-                    return;
-                }
-            } else {
-                typeTriangle = "Triangle does not exist";
-                return;
-            }
-        } else {
-            typeTriangle = "Incorrect data";
-            return;
-        }
+    public boolean isEquilateral() {
+        return ((ab == bc) && (bc == ac) && (ac == ab));
     }
 
-    public String toString() {
-        return "Perimeter: " + perimeter + " Area: " + area + " Type: " + typeTriangle + "\n";
+    public boolean isIsosceles() {
+        return (ab == bc || bc == ac || ac == ab);
+    }
+
+    public boolean isRectangular() {
+        return (Math.round(Math.pow(ac, 2)) == (Math.pow(ab, 2) + Math.pow(bc, 2)));
+    }
+
+    public boolean isArbitrary() {
+        return !isEquilateral() && !isIsosceles() && !isRectangular();
     }
 
     public double getPerimeter() {
@@ -74,14 +58,6 @@ public class Triangle {
 
     public void setArea(double area) {
         this.area = area;
-    }
-
-    public String getTypeTriangle() {
-        return typeTriangle;
-    }
-
-    public void setTypeTriangle(String typeTriangle) {
-        this.typeTriangle = typeTriangle;
     }
 
 }

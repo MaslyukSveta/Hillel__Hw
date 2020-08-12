@@ -1,11 +1,13 @@
+import java.util.function.Function;
+import java.util.function.Predicate;
+
 public class TriangleProcessor {
 
-    Triangle[] triangles;
+    private Triangle[] triangles;
 
     public TriangleProcessor(Triangle[] triangles) {
         this.triangles = triangles;
     }
-
 
     public static double sizeSide(Point p1, Point p2) {
         double size;
@@ -13,39 +15,55 @@ public class TriangleProcessor {
         return size;
     }
 
-    private static void print(Triangle triangle, int number) {
-        System.out.println("perimeter = " + triangle.getPerimeter() +
-                ", square = " + triangle.getArea());
-    }
+    public Triangle triangleByProperty(Function<Triangle,Double> triangleDoubleFunction) {
+        Triangle result = triangles[0];
 
-
-    private static void findMinMaxValues(Triangle[] triangles) {
-        double maxPerimeter = 0;
-        double minPerimeter = 0;
-        double maxArea = 0;
-        double minArea = 0;
-
-        for (int i = 0; i < triangles.length; i++) {
-            if (triangles[i].getPerimeter() >= maxPerimeter) {
-                maxPerimeter = triangles[i].getPerimeter();
+        for (Triangle triangle : triangles) {
+            if (triangleDoubleFunction.apply(result) > triangleDoubleFunction.apply(triangle)) {
+                result = triangle;
             }
-
-            if (triangles[i].getPerimeter() <= minPerimeter) {
-                minPerimeter = triangles[i].getPerimeter();
-            }
-
-            if (triangles[i].getArea() >= maxArea) {
-                maxArea = triangles[i].getArea();
-            }
-
-            if (triangles[i].getArea() >= minArea) {
-                minArea = triangles[i].getArea();
-            }
-
         }
-        System.out.println(maxPerimeter);
-        System.out.println(minPerimeter);
-        System.out.println(maxArea);
-        System.out.println(minArea);
+        return result;
     }
+
+    private  int sortTriangle(Predicate<Triangle> property) {
+        int count = 0;
+        for (Triangle triangle : triangles) {
+            if (property.test(triangle)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public int countEquilateral() {
+        return sortTriangle(Triangle::isEquilateral);
+    }
+    public int countIsosceles() {
+        return sortTriangle(Triangle::isIsosceles);
+    }
+    public int countRectangular() {
+        return sortTriangle(Triangle::isRectangular);
+    }
+    public int countArbitrary() {
+        return sortTriangle(Triangle::isArbitrary);
+    }
+    public Triangle maxPerimeter() {
+        return triangleByProperty(Triangle::perimeter);
+    }
+    public Triangle maxArea() {
+        return triangleByProperty(Triangle::formulaHeron);
+    }
+    public Triangle minPerimeter() {
+        return triangleByProperty(Triangle::perimeter);
+    }
+    public Triangle minArea() {
+        return triangleByProperty(Triangle::formulaHeron);
+    }
+    public Triangle[] getTriangles() {
+        return triangles;
+    }
+    public void setTriangles(Triangle[] triangles) {
+        this.triangles = triangles;
+    }
+
 }
