@@ -1,7 +1,6 @@
-package com.hillel.figura.triangle;
+package com.hillel.hw.hw9.figure.triangle;
 
 public class Point {
-
     private double x;
     private double y;
 

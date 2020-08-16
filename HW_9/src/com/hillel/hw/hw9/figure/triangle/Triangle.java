@@ -1,6 +1,7 @@
-package com.hillel.figura.triangle;
+package com.hillel.hw.hw9.figure.triangle;
 
-import com.hillel.figura.triangleProcessor.TriangleProcessor;
+
+import com.hillel.hw.hw9.figure.triangleProcessor.TriangleProcessor;
 
 public class Triangle {
 
@@ -27,7 +28,7 @@ public class Triangle {
         return perimeter;
     }
 
-    public double formulaHeron() {
+    public double Area() {
         double p;
         p = getPerimeter() / 2;
         area = Math.sqrt(p * (p - ab) * (p - bc) * (p - ac));
@@ -65,5 +66,6 @@ public class Triangle {
     public void setArea(double area) {
         this.area = area;
     }
+
 
 }
