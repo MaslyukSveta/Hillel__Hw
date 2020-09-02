@@ -3,16 +3,15 @@ package com.hillel.hw.hw12.taxPark.carPark;
 
 import com.hillel.hw.hw12.taxPark.vehicle.Car;
 
-public class CarPark3040 implements CarPark {
+public class CarPark3040 {
 
-    private final Car[] cars;
+    private Car[] cars;
 
-    public CarPark3040(Car... countedCars) {
-        cars = countedCars;
+    public CarPark3040(Car[] cars) {
+        this.cars = cars;
     }
 
-    @Override
-    public double fleetCost() {
+    public int fleetCost() {
 
         int fleetCost = 0;
 
@@ -22,8 +21,6 @@ public class CarPark3040 implements CarPark {
         return fleetCost;
     }
 
-
-    @Override
     public Car[] fuelSorting() {
 
         Car[] sorting = cars;
@@ -45,7 +42,7 @@ public class CarPark3040 implements CarPark {
         }
         return sorting;
     }
-    @Override
+
     public Car[] speed(int min, int max) {
 
         Car[] modified = new Car[0];
@@ -69,6 +66,7 @@ public class CarPark3040 implements CarPark {
         return modified;
     }
 
+
     public String toString(Car[] speedCars) {
         String report = "";
         for (Car car : speedCars) {
@@ -77,5 +75,6 @@ public class CarPark3040 implements CarPark {
         return report;
 
     }
+
 
 }

@@ -21,11 +21,12 @@ public class MiniBus implements Car {
 
     @Override
     public String toString() {
-        return "Mini bus " + "Brand " + getBrand() +
-                ", maximum speed " + getMaxSpeed() +
-                " km/h, price " + getPrice() +
-                " $, fuel consumption " + getFuelConsumption() +
-                " l/100km, " + numberOfSeats;
+        return "Brand " + getBrand() +
+                "," + getModel() +
+                "," + getMaxSpeed() +
+                "," + getPrice() +
+                "," + getFuelConsumption() +
+                "," + numberOfSeats;
     }
     @Override
     public String getBrand() {
@@ -39,7 +40,6 @@ public class MiniBus implements Car {
     public int getPrice() {
         return price;
     }
-
     @Override
     public int getMaxSpeed() {
         return maxSpeed;

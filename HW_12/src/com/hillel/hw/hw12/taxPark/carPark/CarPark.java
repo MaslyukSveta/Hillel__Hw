@@ -1,6 +1,5 @@
 package com.hillel.hw.hw12.taxPark.carPark;
 
-
 import com.hillel.hw.hw12.taxPark.vehicle.Car;
 
 public interface CarPark {
@@ -9,9 +8,10 @@ public interface CarPark {
 
     double fleetCost();
 
-    Car[] fuelSorting();
+    Car[] sortCars();
 
     String toString(Car[] speed);
 
 
+    Car[] getCars();
 }

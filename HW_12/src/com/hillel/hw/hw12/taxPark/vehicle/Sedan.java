@@ -7,7 +7,6 @@ public class Sedan implements Car {
     private int price;
     private int maxSpeed;
     private double fuelConsumption;
-
     private String comfortClass;
 
 
@@ -21,13 +20,15 @@ public class Sedan implements Car {
         this.comfortClass = comfortClass;
     }
 
+
     @Override
     public String toString() {
-        return "Sedan " + "Brand " + getBrand() +
-                ", maximum speed " + getMaxSpeed() +
-                " km/h, price " + getPrice() +
-                " $, fuel consumption " + getFuelConsumption() +
-                " l/100km, " + comfortClass;
+        return "Brand " + getBrand() +
+                "," + getModel() +
+                "," + getMaxSpeed() +
+                "," + getPrice() +
+                "," + getFuelConsumption() +
+                "," + comfortClass;
     }
     @Override
     public String getBrand() {

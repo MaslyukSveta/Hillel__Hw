@@ -10,7 +10,7 @@ public class Jeep implements Car {
 
     private double clearance;
 
-    public Jeep(String brand, String model, int price, int maxiSpeed, double fuelConsumption, double clearance) {
+    public Jeep(String brand, String model, int price, int maxSpeed, double fuelConsumption, double clearance) {
         this.brand = brand;
         this.model = model;
         this.price = price;
@@ -20,13 +20,13 @@ public class Jeep implements Car {
     }
 
     @Override
-    public String toString() {
-        return "Jeep " + "Brand " + getBrand() +
-                ", model " + getModel() +
-                ", maximum speed " + getMaxSpeed() +
-                " km/h, price " + getPrice() +
-                " $, fuel consumption " + getFuelConsumption() +
-                " l/100km, " + clearance;
+    public  String toString() {
+        return "Brand " + getBrand() +
+                "," + getModel() +
+                "," + getMaxSpeed() +
+                "," + getPrice() +
+                "," + getFuelConsumption() +
+                "," + clearance;
     }
 
     @Override
