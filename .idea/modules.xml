@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HW_1/HW_1.iml" filepath="$PROJECT_DIR$/HW_1/HW_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_10/HW_10.iml" filepath="$PROJECT_DIR$/HW_10/HW_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_10/src/HW_101.iml" filepath="$PROJECT_DIR$/HW_10/src/HW_101.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_11/HW_11.iml" filepath="$PROJECT_DIR$/HW_11/HW_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_12/HW_12.iml" filepath="$PROJECT_DIR$/HW_12/HW_12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_13/HW_13.iml" filepath="$PROJECT_DIR$/HW_13/HW_13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_13_1/HW_13_1.iml" filepath="$PROJECT_DIR$/HW_13_1/HW_13_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_14/HW_14.iml" filepath="$PROJECT_DIR$/HW_14/HW_14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_15/HW_15.iml" filepath="$PROJECT_DIR$/HW_15/HW_15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_3/HW_3.iml" filepath="$PROJECT_DIR$/HW_3/HW_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_4/HW_4.iml" filepath="$PROJECT_DIR$/HW_4/HW_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_5/HW_5.iml" filepath="$PROJECT_DIR$/HW_5/HW_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_6/HW_6.iml" filepath="$PROJECT_DIR$/HW_6/HW_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_7/HW_7.iml" filepath="$PROJECT_DIR$/HW_7/HW_7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_8/HW_8.iml" filepath="$PROJECT_DIR$/HW_8/HW_8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_9/HW_9.iml" filepath="$PROJECT_DIR$/HW_9/HW_9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hillel__Hw.iml" filepath="$PROJECT_DIR$/.idea/Hillel__Hw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw-14/hw-14.iml" filepath="$PROJECT_DIR$/hw-14/hw-14.iml" />
+    </modules>
+  </component>
+</project>
